@@ -24,8 +24,8 @@ export function Header() {
           <Image
             src="/images/clasche-logo-wide.png"
             alt="KURASUKE.NET"
-            width={489}
-            height={160}
+            width={1024}
+            height={389}
             priority
             className="h-auto w-[150px] sm:w-[195px]"
           />

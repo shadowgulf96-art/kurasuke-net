@@ -17,8 +17,8 @@ export function Footer() {
         <Image
           src="/images/clasche-logo-wide.png"
           alt="KURASUKE.NET"
-          width={489}
-          height={160}
+          width={1024}
+          height={389}
           className="h-auto w-[140px]"
         />
 
