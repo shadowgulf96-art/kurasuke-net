@@ -5,12 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 const NAV_LINKS = [
-  { href: "/articles", label: "記事" },
+  { href: "/", label: "ホーム" },
+  { href: "/articles", label: "記事一覧" },
   { href: "/category", label: "カテゴリー" },
   { href: "/about", label: "Clascheについて" },
 ];
 
-const CTA_HREF = "https://clasche.com/login";
+const CTA_HREF = "https://clasche.com";
 const CTA_LABEL = "Clascheを始める";
 
 export function Header() {
@@ -18,12 +19,16 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-slate-100 bg-white">
-      <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4 sm:h-16 sm:px-6">
-        <Link href="/" className="flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
-          <Image src="/mascot-icon.png" alt="" width={26} height={26} priority />
-          <span className="text-sm font-semibold tracking-wide text-primary-600">
-            KURASUKE.NET
-          </span>
+      <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4 sm:px-6">
+        <Link href="/" onClick={() => setIsMenuOpen(false)} className="shrink-0">
+          <Image
+            src="/images/clasche-logo-wide.png"
+            alt="KURASUKE.NET"
+            width={489}
+            height={160}
+            priority
+            className="h-auto w-[150px] sm:w-[195px]"
+          />
         </Link>
 
         <nav className="hidden items-center gap-7 md:flex">
@@ -49,7 +54,7 @@ export function Header() {
           onClick={() => setIsMenuOpen((v) => !v)}
           aria-label={isMenuOpen ? "メニューを閉じる" : "メニューを開く"}
           aria-expanded={isMenuOpen}
-          className="flex h-9 w-9 items-center justify-center rounded-lg text-slate-600 md:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-lg text-slate-600 md:hidden"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={1.8}>
             {isMenuOpen ? (
@@ -69,7 +74,7 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="rounded-lg px-2 py-2.5 text-sm text-slate-700 hover:bg-slate-50"
+                className="rounded-lg px-2 py-3 text-sm text-slate-700 hover:bg-slate-50"
               >
                 {link.label}
               </Link>
@@ -77,7 +82,7 @@ export function Header() {
             <a
               href={CTA_HREF}
               onClick={() => setIsMenuOpen(false)}
-              className="mt-1 rounded-lg bg-primary-600 px-2 py-2.5 text-center text-sm font-semibold text-white"
+              className="mt-1 rounded-lg bg-primary-600 px-2 py-3 text-center text-sm font-semibold text-white"
             >
               {CTA_LABEL}
             </a>
