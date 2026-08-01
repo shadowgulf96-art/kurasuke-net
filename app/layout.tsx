@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { Header } from "@/components/layout/Header";
 
 const SITE_TITLE = "KURASUKE.NET｜中高生の学校生活を便利にするメディア";
 const SITE_DESCRIPTION =
@@ -27,13 +28,16 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
-  themeColor: "#2563eb",
+  themeColor: "#284fea",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja">
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
