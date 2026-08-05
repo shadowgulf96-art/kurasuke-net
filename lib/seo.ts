@@ -14,7 +14,7 @@ export function articleJsonLd(article: Article) {
     "@type": "Article",
     headline: article.title,
     description: article.description,
-    image: `${SITE_URL}${article.thumbnail}`,
+    image: `${SITE_URL}${article.coverImage || article.thumbnail}`,
     datePublished: article.publishedAt,
     dateModified: article.updatedAt,
     author: {

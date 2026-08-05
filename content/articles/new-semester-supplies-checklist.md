@@ -7,6 +7,8 @@ publishedAt: 2026-08-01
 updatedAt: 2026-08-01
 thumbnail: /images/articles/new-semester-supplies-checklist/thumbnail.png
 thumbnailAlt: 新学期に準備しておきたい持ち物チェックリストのアイキャッチ画像
+coverImage: /images/articles/back-to-school-checklist.webp
+coverImageAlt: 新学期に準備しておきたい持ち物チェックリストのアイキャッチ画像
 author: KURASUKE.NET編集部
 ---
 

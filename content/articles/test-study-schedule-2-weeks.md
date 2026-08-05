@@ -7,6 +7,8 @@ publishedAt: 2026-08-01
 updatedAt: 2026-08-01
 thumbnail: /images/articles/test-study-schedule-2-weeks/thumbnail.png
 thumbnailAlt: テスト2週間前から始める勉強スケジュールのアイキャッチ画像
+coverImage: /images/articles/test-study-schedule.webp
+coverImageAlt: テスト2週間前から始める勉強スケジュールのアイキャッチ画像
 author: KURASUKE.NET編集部
 ---
 

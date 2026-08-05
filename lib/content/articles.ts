@@ -62,6 +62,8 @@ function loadArticle(filename: string): Article {
     updatedAt,
     thumbnail: data.thumbnail as string,
     thumbnailAlt: data.thumbnailAlt as string,
+    coverImage: (data.coverImage as string) || undefined,
+    coverImageAlt: (data.coverImageAlt as string) || undefined,
     author: (data.author as string) || "KURASUKE.NET編集部",
     body: content,
   };

@@ -10,14 +10,16 @@ function formatDate(iso: string): string {
 
 export function ArticleCard({ article }: { article: Article }) {
   const category = getCategory(article.category);
+  const image = article.coverImage || article.thumbnail;
+  const imageAlt = article.coverImage ? article.coverImageAlt || article.title : article.thumbnailAlt;
 
   return (
     <article className="flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white">
       <Link href={`/articles/${article.slug}`} className="block">
         <div className="relative aspect-[1200/630] w-full bg-primary-50">
           <Image
-            src={article.thumbnail}
-            alt={article.thumbnailAlt}
+            src={image}
+            alt={imageAlt}
             fill
             sizes="(min-width: 768px) 33vw, 100vw"
             className="object-cover"

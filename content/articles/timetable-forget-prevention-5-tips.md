@@ -7,6 +7,8 @@ publishedAt: 2026-08-01
 updatedAt: 2026-08-01
 thumbnail: /images/articles/timetable-forget-prevention-5-tips/thumbnail.png
 thumbnailAlt: 時間割を忘れないための5つの方法のアイキャッチ画像
+coverImage: /images/articles/timetable-5tips.webp
+coverImageAlt: 時間割を忘れないための5つの方法のアイキャッチ画像
 author: KURASUKE.NET編集部
 ---
 

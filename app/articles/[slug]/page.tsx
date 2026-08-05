@@ -18,6 +18,8 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const article = getArticleBySlug(params.slug);
   if (!article) return {};
 
+  const image = article.coverImage || article.thumbnail;
+
   return {
     title: article.title,
     description: article.description,
@@ -28,13 +30,13 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
       type: "article",
       publishedTime: article.publishedAt,
       modifiedTime: article.updatedAt,
-      images: [{ url: `${SITE_URL}${article.thumbnail}` }],
+      images: [{ url: `${SITE_URL}${image}` }],
     },
     twitter: {
       card: "summary_large_image",
       title: article.title,
       description: article.description,
-      images: [`${SITE_URL}${article.thumbnail}`],
+      images: [`${SITE_URL}${image}`],
     },
   };
 }
@@ -52,6 +54,8 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
   const blocks = parseMarkdown(article.body);
   const headings = extractHeadings(blocks);
   const related = getRelatedArticles(article);
+  const heroImage = article.coverImage || article.thumbnail;
+  const heroImageAlt = article.coverImage ? article.coverImageAlt || article.title : article.thumbnailAlt;
 
   return (
     <main className="mx-auto max-w-2xl px-4 py-8 sm:px-6">
@@ -81,8 +85,8 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
 
       <div className="relative mt-5 aspect-[1200/630] w-full overflow-hidden rounded-2xl bg-primary-50">
         <Image
-          src={article.thumbnail}
-          alt={article.thumbnailAlt}
+          src={heroImage}
+          alt={heroImageAlt}
           fill
           sizes="(min-width: 768px) 640px, 100vw"
           className="object-cover"
