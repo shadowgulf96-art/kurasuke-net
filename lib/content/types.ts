@@ -27,6 +27,12 @@ export interface Article {
    */
   coverImage?: string;
   coverImageAlt?: string;
+  /**
+   * Optional SEO-specific title. When set, it's used for the page <title>
+   * and OGP/Twitter title metadata instead of `title`. Articles without one
+   * keep using `title` for metadata, so this is purely additive.
+   */
+  metaTitle?: string;
   author: string;
   body: string;
 }

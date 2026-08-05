@@ -19,13 +19,14 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   if (!article) return {};
 
   const image = article.coverImage || article.thumbnail;
+  const metaTitle = article.metaTitle || article.title;
 
   return {
-    title: article.title,
+    title: metaTitle,
     description: article.description,
     alternates: { canonical: `/articles/${article.slug}` },
     openGraph: {
-      title: article.title,
+      title: metaTitle,
       description: article.description,
       type: "article",
       publishedTime: article.publishedAt,
@@ -34,7 +35,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     },
     twitter: {
       card: "summary_large_image",
-      title: article.title,
+      title: metaTitle,
       description: article.description,
       images: [`${SITE_URL}${image}`],
     },
