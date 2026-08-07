@@ -26,13 +26,6 @@ export default function ContactPage() {
         <p className="text-slate-500">
           内容を確認の上、必要に応じて返信いたします。返信までお時間をいただく場合がありますので、あらかじめご了承ください。
         </p>
-        <p>
-          Clascheアプリ本体のご利用に関するお問い合わせは、
-          <a href="https://clasche.com" className="text-primary-600 underline">
-            Clasche
-          </a>
-          側の窓口をご利用ください。
-        </p>
       </div>
     </main>
   );

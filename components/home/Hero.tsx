@@ -16,12 +16,6 @@ export function Hero() {
         >
           新着記事を見る
         </Link>
-        <a
-          href="https://clasche.com"
-          className="inline-flex w-full items-center justify-center rounded-xl bg-slate-100 px-6 py-3 text-sm font-semibold text-slate-800 transition-colors hover:bg-slate-200 sm:w-auto"
-        >
-          Clascheを使ってみる
-        </a>
       </div>
     </section>
   );

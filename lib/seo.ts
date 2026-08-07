@@ -26,7 +26,7 @@ export function articleJsonLd(article: Article) {
       name: "KURASUKE.NET",
       logo: {
         "@type": "ImageObject",
-        url: `${SITE_URL}/images/clasche-logo-wide.png`,
+        url: `${SITE_URL}/images/kurasuke-logo-wide.png`,
       },
     },
     mainEntityOfPage: {

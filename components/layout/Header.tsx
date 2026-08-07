@@ -8,11 +8,8 @@ const NAV_LINKS = [
   { href: "/", label: "ホーム" },
   { href: "/articles", label: "記事一覧" },
   { href: "/category", label: "カテゴリー" },
-  { href: "/about", label: "Clascheについて" },
+  { href: "/about", label: "サイトについて" },
 ];
-
-const CTA_HREF = "https://clasche.com";
-const CTA_LABEL = "Clascheを始める";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,7 +19,7 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4 sm:px-6">
         <Link href="/" onClick={() => setIsMenuOpen(false)} className="shrink-0">
           <Image
-            src="/images/clasche-logo-wide.png"
+            src="/images/kurasuke-logo-wide.png"
             alt="KURASUKE.NET"
             width={1024}
             height={389}
@@ -41,12 +38,6 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <a
-            href={CTA_HREF}
-            className="rounded-full bg-primary-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary-700"
-          >
-            {CTA_LABEL}
-          </a>
         </nav>
 
         <button
@@ -79,13 +70,6 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
-            <a
-              href={CTA_HREF}
-              onClick={() => setIsMenuOpen(false)}
-              className="mt-1 rounded-lg bg-primary-600 px-2 py-3 text-center text-sm font-semibold text-white"
-            >
-              {CTA_LABEL}
-            </a>
           </div>
         </nav>
       )}

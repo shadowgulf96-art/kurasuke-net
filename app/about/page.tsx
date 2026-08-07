@@ -3,45 +3,35 @@ import Image from "next/image";
 import { Breadcrumb } from "@/components/articles/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Clascheについて",
+  title: "サイトについて",
   description:
-    "KURASUKE.NETを運営するClascheについて紹介します。時間割・持ち物・学校イベントをまとめて管理できる、学生向けのスケジュール管理アプリです。",
+    "KURASUKE.NETについて紹介します。中学生・高校生向けに、時間割・勉強・テスト・持ち物・学校行事など学校生活に役立つ情報を発信するメディアサイトです。",
   alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {
   return (
     <main className="mx-auto max-w-2xl px-4 py-8 sm:px-6">
-      <Breadcrumb items={[{ name: "トップ", url: "/" }, { name: "Clascheについて", url: "/about" }]} />
+      <Breadcrumb items={[{ name: "トップ", url: "/" }, { name: "サイトについて", url: "/about" }]} />
 
-      <h1 className="mt-4 text-xl font-bold text-slate-900 sm:text-2xl">Clascheについて</h1>
+      <h1 className="mt-4 text-xl font-bold text-slate-900 sm:text-2xl">サイトについて</h1>
 
       <div className="mt-6 flex items-center gap-3 rounded-2xl bg-primary-50 p-5">
         <Image src="/mascot-icon.png" alt="" width={44} height={44} />
-        <p className="text-sm font-semibold text-slate-800">Clasche（クラスケ）</p>
+        <p className="text-sm font-semibold text-slate-800">KURASUKE.NET</p>
       </div>
 
       <div className="mt-6 space-y-4 text-sm leading-relaxed text-slate-700">
         <p>
-          KURASUKE.NETは、学生向けスケジュール管理アプリ「Clasche（クラスケ）」が運営する、中学生・高校生向けの学校生活メディアです。
+          KURASUKE.NETは、中学生・高校生向けの学校生活メディアです。時間割の管理方法やテスト勉強のコツ、持ち物の準備、学校行事の過ごし方など、日々の学校生活に役立つ情報を記事として発信しています。
         </p>
         <p>
-          Clascheは、時間割・持ち物・学校イベントを1つのアプリでまとめて管理できるサービスです。教科・教室・先生を登録しておけば毎日の時間割がすぐに確認でき、今日と明日の持ち物も自動でリストアップされます。テストや提出物、学校行事もカレンダーで一元管理できます。
+          忙しい毎日の中で「知っていると得すること」を、できるだけわかりやすく、実践しやすい形で紹介することを大切にしています。
         </p>
         <p>
-          スマートフォン・タブレット・パソコンのブラウザから利用でき、Googleアカウントまたはメールアドレスとパスワードで簡単に登録できます。無料プランで基本的な機能をすべて利用できます。
-        </p>
-        <p>
-          KURASUKE.NETでは、Clascheの紹介だけでなく、時間割の管理方法やテスト勉強のコツ、学校行事の準備など、学校生活に役立つ情報を記事として発信しています。記事を読んで役立ったと感じた方は、あわせてClascheもチェックしてみてください。
+          記事の内容やサイトに関するご意見・ご要望は、お問い合わせページよりお気軽にご連絡ください。
         </p>
       </div>
-
-      <a
-        href="https://clasche.com"
-        className="mt-8 inline-flex items-center justify-center rounded-xl bg-primary-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary-700"
-      >
-        Clascheを見る
-      </a>
     </main>
   );
 }

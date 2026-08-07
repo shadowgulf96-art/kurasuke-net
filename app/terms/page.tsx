@@ -36,7 +36,7 @@ export default function TermsPage() {
         <section>
           <h2 className="text-base font-bold text-slate-900">外部リンクについて</h2>
           <p className="mt-2">
-            当サイトから他のウェブサイト（Clascheアプリを含む）へのリンクを設置している場合がありますが、リンク先のサイトの内容について当サイトは責任を負いません。
+            当サイトから他のウェブサイトへのリンクを設置している場合がありますが、リンク先のサイトの内容について当サイトは責任を負いません。
           </p>
         </section>
 

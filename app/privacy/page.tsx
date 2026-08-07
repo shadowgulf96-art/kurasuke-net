@@ -16,7 +16,7 @@ export default function PrivacyPage() {
 
       <div className="mt-6 space-y-6 text-sm leading-relaxed text-slate-700">
         <p>
-          KURASUKE.NET（以下「当サイト」といいます）は、Clascheが運営する学校生活メディアです。当サイトにおける個人情報の取り扱いについて、以下の通り定めます。
+          KURASUKE.NET（以下「当サイト」といいます）における個人情報の取り扱いについて、以下の通り定めます。
         </p>
 
         <section>
@@ -30,13 +30,6 @@ export default function PrivacyPage() {
           <h2 className="text-base font-bold text-slate-900">Cookieの利用について</h2>
           <p className="mt-2">
             当サイトでは、サイトの利用状況を把握する目的で、Cookie等の技術を利用する場合があります。Cookieを無効にすることで、これらの情報の収集を制限できます。
-          </p>
-        </section>
-
-        <section>
-          <h2 className="text-base font-bold text-slate-900">外部サービスへのリンク</h2>
-          <p className="mt-2">
-            当サイトから遷移する「Clasche」アプリ（clasche.com）は当サイトとは別のサービスであり、独自のプライバシーポリシーに基づいて運営されています。Clasche利用時に登録される情報については、Clasche側の定めをご確認ください。
           </p>
         </section>
 
